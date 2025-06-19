@@ -1,0 +1,25 @@
+services:
+
+  postgis:
+    image: postgis/postgis:16-master
+    environment:
+      POSTGRES_PASSWORD: osm
+      POSTGRES_USER: osm
+      POSTGRES_DB: osm
+    ports:
+      - 5432:5432
+    volumes:
+      - ./mnt:/mnt
+      - ./pgdata:/pgdata
+
+  osm2pgsql:
+    image: iboates/osm2pgsql:2.1.1
+    environment:
+      PGPASSWORD: osm
+    volumes:
+      - ./mnt:/mnt
+
+  robosat:
+    image: mapbox/robosat:latest-cpu
+    volumes:
+      - ./mnt:/mnt

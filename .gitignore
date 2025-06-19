@@ -2,5 +2,5 @@ data/
 pgdata/
 venv/
 .tool-versions
-
 mnt/*.pbf
+.env

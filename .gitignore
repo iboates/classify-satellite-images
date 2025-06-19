@@ -5,3 +5,9 @@ venv/
 .tool-versions
 mnt/*.pbf
 .env
+*.log
+*.pth
+*.json
+config.yaml
+requirements.txt
+*.wandb

@@ -11,3 +11,5 @@ mnt/*.pbf
 config.yaml
 requirements.txt
 *.wandb
+latest-run
+data_segmentation/
